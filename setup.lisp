@@ -69,5 +69,10 @@
        (t ,(merge-pathnames #P "**/*.*" fasl))
        :ignore-inherited-configuration
        :disable-cache))
+    (format t ";;;;; qlt: loading prerequisisites~%")
     (qlt-load-prerequisites file)
-    (load file)))
+    (format t ";;;;; qlt: load ~A starting with scratch in ~S~%"
+	    file
+	    *scratch-directory*)
+    (load file :verbose t :print t)
+    (format t ";;;;; qlt: load completed successfully~%")))

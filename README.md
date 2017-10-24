@@ -46,8 +46,11 @@ These tests are currently run from the Quicklisp dist construction
 system. The goal is to reduce the number of runtime errors in released
 Quicklisp dists.
 
-Easily running tests separately from the Quicklisp dist system is a
-goal, but not yet implemented.
+To run an individual test, use the run-test.sh script, like so:
+
+    ./run-test.sh tests/vecto.lisp
+
+The build and load log will be written to standard output.
 
 ## Feedback
 
